@@ -55,5 +55,18 @@ Start-Sleep -Seconds 2
 # Set the service to start automatically
 Start-Process sc.exe -ArgumentList "config pos-journal-logger start= auto" -Wait
 
+# Create Inbound and Outbound Firewall Rules for Port 9100
+Write-Output "Creating inbound and outbound firewall rules for port 9100..."
+
+# Inbound rule for Port 9100
+New-NetFirewallRule -DisplayName "Inbound Rule for Port 9100" `
+    -Direction Inbound -Protocol TCP -LocalPort 9100 `
+    -Action Allow -Profile Any -Description "Allows inbound traffic on port 9100 for pos journal logger"
+
+# Outbound rule for Port 9100
+New-NetFirewallRule -DisplayName "Outbound Rule for Port 9100" `
+    -Direction Outbound -Protocol TCP -LocalPort 9100 `
+    -Action Allow -Profile Any -Description "Allows outbound traffic on port 9100 for pos journal logger"
+
 # Restart the computer
 Restart-Computer -Force
