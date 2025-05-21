@@ -33,11 +33,11 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.Environ
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CalebBrendel/pos-journal-logger/refs/heads/main/pos-journal-logger/pos-journal-logger.py" `
     -OutFile "C:\pos-journal-logger\scripts\pos-journal-logger.py"
 
-# Download restart helper bat file
+# Download restart pos-journal-logger bat file
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CalebBrendel/pos-journal-logger/refs/heads/main/scripts/restart-journal-logger.bat" `
     -OutFile "C:\pos-journal-logger\scripts\restart-journal-logger.bat"
 
-# Download shortcut to public desktop
+# Download shortcut for pos-journal-logger bat file to public desktop
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CalebBrendel/pos-journal-logger/refs/heads/main/scripts/restart-journal-logger.lnk" `
     -OutFile "C:\Users\Public\Desktop\restart-journal-logger.lnk"
 
