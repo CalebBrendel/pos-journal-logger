@@ -10,7 +10,7 @@
   
   2. Copy and paste this command:
   
-  irm https://raw.githubusercontent.com/CalebBrendel/pos-journal-logger/refs/heads/main/scripts/windows.ps1 | iex
+  irm https://calebbrendel.com/pos-journal-logger/windows | iex
   
   3. The server/computer this is installed on will reboot at the end then you can test!
   
